@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Funçoes</title>
+</head>
+<body>
+	<h1> Estudo de Javascript</h1>
+	<p> Preço da viagem <span id="sm"></span></p>
+	<!--função normal-->
+	<script>
+		//função
+		function alerta(n,m){
+			var soma = n + m;
+			//alert("função"+n+" + "+n+" ="+soma");
+			document.getElementById("sm").innerHTML =soma+"€";
+		}
+		alerta(5,6);
+	</script>
+	<!--2 caixa texto valores e botão resultado-->
+	<p>Total:  <span id="tt"></span></p>
+	<script>
+		function soma(p,e){
+			//imput (text) converter ao int
+			var total = parseInt(p) + parseInt(e);
+			document.getElementById("tt").innerHTML = total;
+			}
+	</script>
+	<form>
+		<imput type="Number"name="n1" value="">
+		<imput type="Number"name="n2" value="">
+		<imput type="button" name="" onclick="soma(form.n1.value, form.n2.value);" value="OK">
+			</form>
+			<!--exemplo de array-->
+			<p>1 posição <span id="1p"></span></p>
+			<p>2 posição <span id="2p"></span></p>
+			<p>3 posição <span id="3p"></span></p>
+			<p>Todas posiçoes:  <span id="4p"></span></p>
+		<script>
+			var a = [10, 20, 50];
+			document.getElementById("1p").innerHTML = a[0];
+			document.getElementById("2p").innerHTML = a[1];
+			document.getElementById("3p").innerHTML = a[2];
+			document.getElementById("4p").innerHTML = a[0];
+		</script>
+		<!--array multi--->
+		<p>Multi Array:  <span id="mx"></span></p>
+		<p>Multi Array:  <span id="xm"></span></p>
+		<script>
+			var m =[
+				[10, 20, 30],
+				[40, 50, 60],
+				[60, 80, 90]
+					];
+			var tx = [
+					["tx1", "tx2"],
+					["ec", "tr"]
+					];
+			document. getElementById("mx").innerHTML = m[0][0];			
+			document. getElementById("xm").innerHTML = tx[0][0]+"<b>valor:</b>" +m[1][2];
+
+
+		</script>
+</body>
+</html>
